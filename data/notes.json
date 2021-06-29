@@ -2,15 +2,18 @@
     "notes": [
         {
             "title": "Note1",
-            "message": "Note Message"
+            "text": "Note Message1",
+            "id": "1"
         },
         {
             "title": "Note2",
-            "message": "Note Message"
+            "text": "Note Message2",
+            "id": "2"
         },
         {
             "title": "Note3",
-            "message": "Note Message"
+            "text": "Note Message3",
+            "id": "3"
         }
     ]
 }
