@@ -1,3 +1,5 @@
+const en = require("nanoid-good/locale/en")
+const nanoid = require("nanoid-good").nanoid(en);
 let noteTitle;
 let noteText;
 let saveNoteBtn;
