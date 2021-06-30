@@ -1,6 +1,6 @@
 const router = require('express').Router();
+const { addID , deleteByID } = require('../../lib/id')
 var { notes } =  require('../../data/notes')
-const { addID } = require('../../lib/id')
 
 router.get('/notes', (req, res) => {
     let results = addID(notes)
@@ -14,11 +14,6 @@ router.post('/notes', (req, res) => {
   module.exports = router;
 
 router.delete('/notes/:id', (req,res)=> {
-  for(let i = 0;i<notes.length;i++)
-  if(notes[i].id == req.params.id)
-  {
-    delete notes[i]
-  }
-  notes = notes.filter(() => true)  
+  notes = deleteByID(notes, req.params.id)
   res.json(notes)
 })
