@@ -5,13 +5,11 @@ const defaultNotes = notes
 
 //Gets notes from /notes and add unique IDs on page render
 router.get('/notes', (req, res) => {
-  let results = addID(notes)
-  res.json(results)
+  res.json(addID(notes))
 });
 //Add to notes.json 
 router.post('/notes', (req, res) => {
-  results = notes.push(req.body)
-  res.json(results)
+  res.json(notes.push(req.body))
 });
 //Delete from notes.json
 router.delete('/notes/:id', (req, res) => {
