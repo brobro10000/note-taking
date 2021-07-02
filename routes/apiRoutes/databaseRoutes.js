@@ -1,17 +1,19 @@
 const router = require('express').Router();
 const { addID, deleteByID } = require('../../lib/id')
 var { notes } = require('../../data/notes')
+const defaultNotes = notes
 
+//Gets notes from /notes and add unique IDs on page render
 router.get('/notes', (req, res) => {
   let results = addID(notes)
   res.json(results)
 });
-
+//Add to notes.json 
 router.post('/notes', (req, res) => {
-  let results = notes.push(req.body)
+  results = notes.push(req.body)
   res.json(results)
 });
-
+//Delete from notes.json
 router.delete('/notes/:id', (req, res) => {
   notes = deleteByID(notes, req.params.id)
   res.json(notes)

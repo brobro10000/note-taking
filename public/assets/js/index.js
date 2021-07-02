@@ -3,18 +3,23 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-
+let defaultButton;
+let count = 0;
+const defaultNote = []
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
+  defaultButton = document.querySelector('.default')
 }
 
 // Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
+  if(elem == defaultButton)
+  elem.style.display = '';
 };
 
 // Hide an element
@@ -115,16 +120,26 @@ const handleRenderSaveBtn = () => {
     show(saveNoteBtn);
   }
 };
-
+//Default note button clears current notes and populates with default page load notes
+handleNoteDefault = () => {
+  deleteNote(-1).then(() => {
+    for (j in defaultNote[0])
+      saveNote(defaultNote[0][j]).then(getAndRenderNotes())
+  });
+}
 // Render the list of note titles
 const renderNoteList = async (notes) => {
-  let jsonNotes = await notes.json();
+  var jsonNotes = await notes.json();
+  if(count == 0)
+  defaultNote.push(jsonNotes)
+  count = 1
+  console.log(defaultNote,jsonNotes)
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
 
   let noteListItems = [];
-
+  
   // Returns HTML element with or without a delete button
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
@@ -178,6 +193,7 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
+  defaultButton.addEventListener('click', handleNoteDefault);
 }
 
 getAndRenderNotes();
