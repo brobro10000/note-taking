@@ -133,7 +133,6 @@ const renderNoteList = async (notes) => {
   if(count == 0)
   defaultNote.push(jsonNotes)
   count = 1
-  console.log(defaultNote,jsonNotes)
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }

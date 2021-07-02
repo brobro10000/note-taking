@@ -1,16 +1,28 @@
 {
     "notes": [
         {
-            "title": "Note1",
-            "text": "Note Message1"
+            "title": "Create Github Repository",
+            "text": "Create the repository for the Note Taker challenge for module 11 along with the .gitignore file"
         },
         {
-            "title": "Note2",
-            "text": "Note Message2"
+            "title": "Install dependencies for backend",
+            "text": "Start by initializing node with 'npm init', then install required dependencies like express and our chosen package for the unique ID generator"
         },
         {
-            "title": "Note3",
-            "text": "Note Message3"
+            "title": "Route the required files",
+            "text": "Create appropriate directories and rename required files to accurately navigate to the pages "
+        },
+        {
+            "title": "Create a hub for server",
+            "text": "In a server javascript file, create a hub for all the routes to meet and navigate through to send and receive the appropriate information"
+        },
+        {
+            "title": "Write appropriate actions for front end",
+            "text": "Create actions that are routed to the backend database that allows the user to create new data, remove data and access the data"
+        },
+        {
+            "title": "Prepare the assignment for submission",
+            "text": "Write a professional readme to present your assignment to be graded. Deploy the application on heroku and test out the required functionality for the MVP, followed by the bonus and any extra functionality"
         }
     ]
 }
