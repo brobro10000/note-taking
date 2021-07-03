@@ -25,17 +25,17 @@ This program allows you to write, save and delete notes to a database and retrie
 
 - By selecting the + on the top right of the screen, we can enter a new note. The floppy disk appears once the title and text area has some input. We can save our note by pressing the floppy disk.
 
-![savingNote1](assets/images/saveNewNote1SS.PNG)
+![savingNote1](assets/images/savenewNote1SS.PNG)
 
 
 - After saving the note, it will immediately appear on the left side at the very bottom of the list.
 
-![savingNote2](assets/images/saveNewNote2SS.PNG)
+![savingNote2](assets/images/savenewNote2SS.PNG)
 
 
 - The note will also be available to view right away without refreshing the page.
 
-![savingNote3](assets/images/saveNewNote3SS.PNG)
+![savingNote3](assets/images/savenewNote3SS.PNG)
 
 
 - By pressing the trashcan, we can delete notes from the list
