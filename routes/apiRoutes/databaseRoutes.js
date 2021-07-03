@@ -9,8 +9,8 @@ router.get('/notes', (req, res) => {
 });
 //Add to notes.json 
 router.post('/notes', (req, res) => {
-  notes.push(req.body)
-  res.json(notes)
+  let results  = notes.push(req.body)
+  res.json(results)
 });
 //Delete from notes.json
 router.delete('/notes/:id', (req, res) => {
