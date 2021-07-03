@@ -48,6 +48,15 @@ This program allows you to write, save and delete notes to a database and retrie
 ![defaultNote](assets/images/defaultNoteSS.PNG)
 
 
+- Having on site deployed on Heroku, we can navigate the pages right form the URL
+
+![websiteNote](assets/images/websiteSS.PNG)
+
+
+- We can also navigate to the database through [api/notes](https://brobro10000-note-taker.herokuapp.com/api/notes)
+
+![apiNote](assets/images/apiSS.PNG)
+
 # Why it Matters?
 Using express is a quick and simple way to get a server set up through your local host with a multitude of features. Pairing it with a free hosting service such as [Heroku](https://www.heroku.com/about), we can have an application up and running in no time! A note taker app is a great introduction into creating a simple program using backend data tied in with front end functionality. 
 
