@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { addID, deleteByID } = require('../../lib/id')
 var { notes } = require('../../data/notes')
-const defaultNotes = notes
 
 //Gets notes from /notes and add unique IDs on page render
 router.get('/notes', (req, res) => {
